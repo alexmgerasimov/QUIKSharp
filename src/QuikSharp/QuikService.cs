@@ -558,7 +558,7 @@ namespace QuikSharp
                 throw new ArgumentNullException(nameof(message));
             }
 
-            var parsed = Enum.TryParse(message.Command, ignoreCase: true, out EventNames eventName);
+            var parsed = Enum.TryParse(message.Command, true, out EventNames eventName);
             if (parsed)
             {
                 // TODO use as instead of assert+is+cast
